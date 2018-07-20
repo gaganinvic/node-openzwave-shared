@@ -134,7 +134,7 @@ void handleControllerCommand(NotifInfo *notif)
 
   Local<v8::Value> info[16];
   info[0] = Nan::New<String>("controller command").ToLocalChecked();
-  info[1] = Nan::New<Integer>(notif->nodeid);
+  info[1] = Nan::New<Integer>(notif->nodeId);
   info[2] = Nan::New<Integer>(notif->event);        // Driver::ControllerCommand
   info[3] = Nan::New<Integer>(notif->notification); // Driver::ControllerCommand
   info[4] = Nan::New<String>(notif->help.c_str()).ToLocalChecked();
